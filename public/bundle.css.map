@@ -1,0 +1,12 @@
+{
+  "version": 3,
+  "file": "bundle.css",
+  "sources": [
+    "..\\App.svelte"
+  ],
+  "sourcesContent": [
+    "<script>\n\texport let name;\n\tconst familyName = 'Lanese';\n\n\t$: uppercaseName = name.toUpperCase();\n\t$: uppercaseFamilyName = familyName.toUpperCase();\n\t$: console.log(uppercaseName, uppercaseFamilyName);\n\n\tconst changeName = () => name = (name === 'Leo')?  'Leonardo'  : 'Leo';\n</script>\n\n<style>\n\th1 {\n\t\tcolor: #323f7d;\n\t}\n\tbutton {\n\t\tborder: 1px solid #323f7d;\n\t}\n</style>\n\n<h1>Hello,  my name is: {uppercaseName} {uppercaseFamilyName}</h1>\n<button on:click={changeName}>Change-Name</button>\n\n"
+  ],
+  "names": [],
+  "mappings": "AAYC,EAAE,eAAC,CAAC,AACH,KAAK,CAAE,OAAO,AACf,CAAC,AACD,MAAM,eAAC,CAAC,AACP,MAAM,CAAE,GAAG,CAAC,KAAK,CAAC,OAAO,AAC1B,CAAC"
+}
